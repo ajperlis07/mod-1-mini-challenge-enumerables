@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 
 spicy_foods = [
   { name: 'Buffalo Wings', cuisine: 'American', heat_level: 3 },
@@ -11,10 +11,21 @@ def print_spicy_foods(spicy_foods)
       puts "#{element[:name]} (#{element[:cuisine]}) | Heat Level  #{element[:heat_level]}"
     end
 end
-print_spicy_foods(spicy_foods)
+# print_spicy_foods(spicy_foods)
+
 def get_names(spicy_foods)
 
+  spicy = []
+
+  spicy_foods.each do |food|
+    spicy.push(food[:name]) 
+  end   
+
+  puts spicy.class
+
 end
+
+get_names(spicy_foods)
 
 def spiciest_foods(spicy_foods)
 
@@ -35,5 +46,5 @@ end
 
 # Use this to test your methods
 # run "ruby run.rb" and try calling the methods from the console
-binding.pry
-"pls"
+# binding.pry
+#"pls"
